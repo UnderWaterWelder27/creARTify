@@ -1,3 +1,4 @@
+import 'package:creartify/network/download_script.dart';
 import 'package:creartify/presentation/illustration_page/widgets/illustration_description_widget.dart';
 import 'package:creartify/presentation/illustration_page/widgets/illustration_overview_widget.dart';
 import 'package:creartify/theme/theme_app.dart';
@@ -25,6 +26,7 @@ class IllustrationView extends StatefulWidget {
 
 
 class _IllustrationViewState extends State<IllustrationView> {
+  ImageDownloader downloader = ImageDownloader();
   double _dragScrollSheetExtent = 0;
   double _widgetHeight = IllustrationView.illustrationHeight;
   double _widgetWidth = IllustrationView.illustrationWidth;
@@ -123,7 +125,9 @@ class _IllustrationViewState extends State<IllustrationView> {
                     icon: Icon(Icons.arrow_back_ios),
                   ),
                   IconButton(
-                    onPressed: () => Navigator.pop(context),
+                    onPressed: () async {
+                      await downloader.downloadFile(widget.imageData['largeImageURL']);
+                    },
                     color: globalColors.primaryForeground,
                     iconSize: kIconSmall,
                     icon: Icon(Icons.file_download_outlined),

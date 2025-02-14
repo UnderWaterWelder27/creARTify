@@ -89,7 +89,7 @@ class _GalleryViewState extends State<GalleryView> {
       children: [
 
         Expanded(
-          flex: 4,
+          flex: 5,
           child: ApplicationHeaderWidget(
             title: 'Illustrations',
             description: 'CURATED GALLERIES',
@@ -97,7 +97,7 @@ class _GalleryViewState extends State<GalleryView> {
         ),
 
         Expanded(
-          flex: 13,
+          flex: 14,
           child: BlocBuilder<GalleryBloc, GalleryState>(
             buildWhen: (previous, current) {
               return current is GalleryLoadedState ||

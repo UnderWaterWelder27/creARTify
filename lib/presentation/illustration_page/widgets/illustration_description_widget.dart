@@ -1,4 +1,5 @@
 import 'package:creartify/presentation/illustration_page/widgets/illustration_label_widget.dart';
+import 'package:creartify/theme/colors.dart';
 import 'package:creartify/theme/theme_app.dart';
 import 'package:creartify/theme/units.dart';
 import 'package:flutter/material.dart';
@@ -89,7 +90,7 @@ class IllustrationDescriptionWidget extends StatelessWidget {
             icon: Icons.tag_rounded,
             text: " Tags",
           ),
-          Text(imageData['tags'], style: ThemeApp.textTheme.labelMedium),
+          Text(imageData['tags'], style: ThemeApp.textTheme.labelMedium?.copyWith(color: AppColors().inactiveDark)),
         ],
       ),
     );

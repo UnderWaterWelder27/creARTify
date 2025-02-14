@@ -21,7 +21,6 @@ dependencies:
   full_screen_image: ^2.0.0
   gradient_icon: ^2.0.9
   # Downloader
-  flutter_downloader: ^1.11.8
   permission_handler: ^11.3.1
   path_provider: ^2.1.5
 

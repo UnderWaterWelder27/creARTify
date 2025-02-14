@@ -52,7 +52,7 @@ class _BoardsViewState extends State<BoardsView> {
         children: [
 
           Expanded(
-            flex: 4,
+            flex: 5,
             child: ApplicationHeaderWidget(
               title: 'Boards',
               description: 'Following galleries to power up your art career',
@@ -60,7 +60,7 @@ class _BoardsViewState extends State<BoardsView> {
           ),
 
           Expanded(
-            flex: 13,
+            flex: 14,
             child: BlocBuilder<BoardsBloc, BoardsState>(
               builder: (context, state) {
 

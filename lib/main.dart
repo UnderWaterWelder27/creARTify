@@ -7,11 +7,9 @@ import 'package:creartify/theme/theme_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_downloader/flutter_downloader.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await FlutterDownloader.initialize(debug: true, ignoreSsl: true);
   runApp(const CreArtifyApp());
 }
 
